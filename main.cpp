@@ -4,6 +4,26 @@
 
 using namespace std;
 
+void calc_rectangle() {
+    double shir, dlin;
+    cout << "\n--- Прямоугольник ---\n";
+    cout << "Введите ширину прямоугольника: ";
+    cin >> shir;
+    cout << "Введите длину прямоугольника: ";
+    cin >> dlin;
+    if (shir <= 0 || dlin <= 0) {
+        cout << "Ошибка ввода\n";
+        return;
+    }
+    double plos = shir * dlin;
+    double perim = 2 * (shir + dlin);
+    double diagonal = sqrt(pow(shir, 2) + pow(dlin, 2));
+    cout << "Результаты:\n";
+    cout << "Площадь прямоугольника: " << plos << "\n";
+    cout << "Периметр прямоугольника: " << perim << "\n";
+    cout << "Длина диагонали: " << diagonal << "\n";
+}
+
 int main() {
     setlocale(LC_ALL, "ru_RU.UTF-8");
     int choice = 0;
