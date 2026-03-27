@@ -4,6 +4,56 @@
 
 using namespace std;
 
+
+void calc_trapezoid() {
+    double a, b, c, d;
+    cout << "\n--- Трапеция ---\n";
+    cout << "Введите нижнее основание A: ";
+    cin >> a;
+    cout << "Введите верхнее основание B: ";
+    cin >> b;
+    cout << "Введите боковые стороны C и D: ";
+    cin >> c >> d;
+    if (a <= 0 || b <= 0 || c <= 0 || d <= 0) {
+        cout << "Стороны должны быть положительными\n";
+        return;
+    }
+    double diff = abs(a - b);
+    if (diff >= c + d || diff <= abs(c - d)) {
+        cout << "Трапеция не существует\n";
+        return;
+    }
+    double term = (diff * diff + c * c - d * d) / (2.0 * diff);
+    double height = sqrt(c * c - term * term);
+    cout << "Периметр: " << a + b + c + d << "\n"
+         << "Средняя линия: " << (a + b) / 2 << "\n"
+         << "Высота: " << height << "\n"
+         << "Площадь: " << (a + b) / 2 * height << "\n";
+}
+
+
+void calc_rectangle() {
+    double shir, dlin;
+    cout << "\n--- Прямоугольник ---\n";
+    cout << "Введите ширину прямоугольника: ";
+    cin >> shir;
+    cout << "Введите длину прямоугольника: ";
+    cin >> dlin;
+    if (shir <= 0 || dlin <= 0) {
+        cout << "Ошибка ввода\n";
+        return;
+    }
+    double plos = shir * dlin;
+    double perim = 2 * (shir + dlin);
+    double diagonal = sqrt(pow(shir, 2) + pow(dlin, 2));
+    cout << "Результаты:\n";
+    cout << "Площадь прямоугольника: " << plos << "\n";
+    cout << "Периметр прямоугольника: " << perim << "\n";
+    cout << "Длина диагонали: " << diagonal << "\n";
+}
+
+
+
 void calc_triangle() {
     double a, b, c;
     cout << "\n--- Треугольник ---\n";
