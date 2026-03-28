@@ -5,6 +5,7 @@
 using namespace std;
 
 
+<<<<<<< HEAD
 void calc_trapezoid() {
     double a, b, c, d;
     cout << "\n--- Трапеция ---\n";
@@ -52,6 +53,34 @@ void calc_rectangle() {
     cout << "Длина диагонали: " << diagonal << "\n";
 }
 
+
+void calc_triangle() {
+    double a, b, c;
+    cout << "\n--- Треугольник ---\n";
+    cout << "Введите стороны треугольника (a b c): ";
+    cin >> a >> b >> c;
+    if (a + b <= c || a + c <= b || b + c <= a) {
+        cout << "Ошибка: треугольник с такими сторонами не существует!\n";
+        return;
+    }
+    double perimeter = a + b + c;
+    cout << "Периметр: " << perimeter << "\n";
+    double semi = perimeter / 2.0;
+    cout << "Полупериметр: p = " << semi << "\n";
+    double area = sqrt(semi * (semi - a) * (semi - b) * (semi - c));
+    cout << "Площадь (кв.м): " << area << "\n";
+    const double eps = 1e-9;
+    bool is_isosceles = (fabs(a - b) < eps || fabs(b - c) < eps || fabs(a - c) < eps);
+    cout << "Равнобедренный? ";
+    if (is_isosceles) {
+        cout << "Да\n";
+        if (fabs(a - b) < eps) cout << " (a = b)\n";
+        else if (fabs(b - c) < eps) cout << " (b = c)\n";
+        else if (fabs(a - c) < eps) cout << " (a = c)\n";
+    } else {
+        cout << "Нет\n";
+    }
+}
 
 
 int main() {
