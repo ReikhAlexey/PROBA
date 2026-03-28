@@ -4,6 +4,31 @@
 
 using namespace std;
 
+void calc_trapezoid() {
+    double a, b, c, d;
+    cout << "\n--- Трапеция ---\n";
+    cout << "Введите нижнее основание A: ";
+    cin >> a;
+    cout << "Введите верхнее основание B: ";
+    cin >> b;
+    cout << "Введите боковые стороны C и D: ";
+    cin >> c >> d;
+    if (a <= 0 || b <= 0 || c <= 0 || d <= 0) {
+        cout << "Стороны должны быть положительными\n";
+        return;
+    }
+    double diff = abs(a - b);
+    if (diff >= c + d || diff <= abs(c - d)) {
+        cout << "Трапеция не существует\n";
+        return;
+    }
+    double term = (diff * diff + c * c - d * d) / (2.0 * diff);
+    double height = sqrt(c * c - term * term);
+    cout << "Периметр: " << a + b + c + d << "\n"
+         << "Средняя линия: " << (a + b) / 2 << "\n"
+         << "Высота: " << height << "\n"
+         << "Площадь: " << (a + b) / 2 * height << "\n";
+}
 
 void calc_rectangle() {
     double shir, dlin;
@@ -26,12 +51,12 @@ void calc_rectangle() {
 }
 
 int main() {
+    std::cout << "Проект: Геометрические фигуры" << std::endl;
     setlocale(LC_ALL, "ru_RU.UTF-8");
     int choice = 0;
     
     while (true) {
-
-    	    cout << "\n===============================\n";
+        cout << "\n===============================\n";
         cout << "Выберите геометрическую фигуру:\n";
         cout << "1 - Трапеция\n";
         cout << "2 - Прямоугольник\n";
