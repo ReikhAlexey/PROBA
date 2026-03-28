@@ -4,31 +4,6 @@
 
 using namespace std;
 
-void calc_trapezoid() {
-    double a, b, c, d;
-    cout << "\n--- Трапеция ---\n";
-    cout << "Введите нижнее основание A: ";
-    cin >> a;
-    cout << "Введите верхнее основание B: ";
-    cin >> b;
-    cout << "Введите боковые стороны C и D: ";
-    cin >> c >> d;
-    if (a <= 0 || b <= 0 || c <= 0 || d <= 0) {
-        cout << "Стороны должны быть положительными\n";
-        return;
-    }
-    double diff = abs(a - b);
-    if (diff >= c + d || diff <= abs(c - d)) {
-        cout << "Трапеция не существует\n";
-        return;
-    }
-    double term = (diff * diff + c * c - d * d) / (2.0 * diff);
-    double height = sqrt(c * c - term * term);
-    cout << "Периметр: " << a + b + c + d << "\n"
-         << "Средняя линия: " << (a + b) / 2 << "\n"
-         << "Высота: " << height << "\n"
-         << "Площадь: " << (a + b) / 2 * height << "\n";
-}
 
 void calc_rectangle() {
     double shir, dlin;
@@ -49,6 +24,7 @@ void calc_rectangle() {
     cout << "Периметр прямоугольника: " << perim << "\n";
     cout << "Длина диагонали: " << diagonal << "\n";
 }
+
 
 int main() {
     std::cout << "Проект: Геометрические фигуры" << std::endl;
