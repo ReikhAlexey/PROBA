@@ -18,8 +18,8 @@ void calc_trapezoid() {
         cout << "Стороны должны быть положительными\n";
         return;
     }
-    double diff = abs(a - b);
-    if (diff >= c + d || diff <= abs(c - d)) {
+    double diff = abs(a - b);   //Проверка сущствования трапеции
+    if (diff >= c + d || diff <= abs(c - d)) { 
         cout << "Трапеция не существует\n";
         return;
     }
