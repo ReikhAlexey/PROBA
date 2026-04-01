@@ -128,8 +128,8 @@ int main() {
         cin >> choice;
 
         if (choice == 0) {
-            cout << "Завершение работы программы.\n";// ;jgf
-            break;
+            cout << "Завершение работы программы.\n";
+	    break;
         }
 
         switch (choice) {
