@@ -1,4 +1,4 @@
-#include <iostream>//оно существует
+#include <iostream>
 #include <cmath>
 #include <clocale>
 
@@ -137,9 +137,9 @@ int main() {
             case 2: calc_rectangle(); break;
             case 3: calc_triangle(); break;
             case 4: calc_circle(); break;
-            default: cout << "Неверный выбор. Попробуйте снова.\n"; //hui
+            default: cout << "Неверный выбор. Попробуйте снова.\n";
         }
     }
-    return 0;// gegeg
+    return 0;
 }
 }
