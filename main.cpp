@@ -128,7 +128,7 @@ int main() {
         cin >> choice;
 
         if (choice == 0) {
-            cout << "Завершение работы программы.\n";
+            cout << "Завершение работы программы.\n";// ;jgf
             break;
         }
 
@@ -142,4 +142,4 @@ int main() {
     }
     return 0;
 }
-
+}
