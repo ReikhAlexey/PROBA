@@ -31,7 +31,6 @@ void calc_trapezoid() {
          << "Площадь: " << (a + b) / 2 * height << "\n";
 }
 
-
 void calc_rectangle() {
     double shir, dlin;
     cout << "\n--- Прямоугольник ---\n";
@@ -108,7 +107,7 @@ void calc_circle() {
 }
 
 
-int main() {
+int main() { //Коментарий
     std::cout << "Проект: Геометрические фигуры" << std::endl;
     setlocale(LC_ALL, "ru_RU.UTF-8");
     int choice = 0;
