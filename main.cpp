@@ -20,7 +20,7 @@ void calc_trapezoid() {
     }
     double diff = abs(a - b);   
     if (diff >= c + d || diff <= abs(c - d)) { 
-        cout << "Трапеция не существует\n";
+        cout << "Трапеция не существует\n"; //Провалено условие
         return;
     }
     double term = (diff * diff + c * c - d * d) / (2.0 * diff);
