@@ -14,23 +14,28 @@ void calc_trapezoid() {
     cin >> b;
     cout << "Введите боковые стороны C и D: ";
     cin >> c >> d;
+    
     if (a <= 0 || b <= 0 || c <= 0 || d <= 0) {
         cout << "Стороны должны быть положительными\n";
         return;
     }
-    double diff = abs(a - b);   
+    
+    double diff = abs(a - b);
+    
     if (diff >= c + d || diff <= abs(c - d)) { 
-        cout << "Трапеция не существует\n"; //Провалено условие
+        cout << "Трапеция не существует\n";
         return;
     }
+    
+    cout << "Периметр: " << a + b + c + d << "\n";
+    cout << "Средняя линия: " << (a + b) / 2 << "\n";
+    
+    // Формула площади: S = (a+b)/2 * √[c² - {((a-b)² + c² - d²)/(2(a-b))}²]
     double term = (diff * diff + c * c - d * d) / (2.0 * diff);
-    double height = sqrt(c * c - term * term);
-    cout << "Периметр: " << a + b + c + d << "\n"
-         << "Средняя линия: " << (a + b) / 2 << "\n"
-         << "Высота: " << height << "\n"
-         << "Площадь: " << (a + b) / 2 * height << "\n";
+    double area = ((a + b) / 2.0) * sqrt(c * c - term * term);
+    
+    cout << "Площадь: " << area << "\n";
 }
-
 
 int main() {
     std::cout << "Проект: Геометрические фигуры" << std::endl;
