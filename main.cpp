@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>//mkjoij
 #include <cmath>
 #include <clocale>
 
