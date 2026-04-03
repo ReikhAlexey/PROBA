@@ -17,7 +17,7 @@ void calc_circle() {
     }
     cout << "Введите угол сектора (в градусах): ";
     cin >> angle;
-    if (angle < 0 || angel > 360) {
+    if (angle < 0 || angle > 360) {
         cout << "Ошибка: угол не может быть отрицательным или больше 360 грудусов!\n";
         return;
     }
@@ -62,4 +62,4 @@ int main() {
         }
     }
     return 0;
-}
+}//djqwii
