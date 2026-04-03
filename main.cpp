@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void calc_circle() {
+void calc_circle() {//qwerwrqwqqrw
     double r, angle;
     const double PI = 3.141592653589793;
     cout << "\n--- Окружность ---\n";
