@@ -17,8 +17,8 @@ void calc_circle() {
     }
     cout << "Введите угол сектора (в градусах): ";
     cin >> angle;
-    if (angle < 0) {
-        cout << "Ошибка: угол не может быть отрицательным!\n";
+    if (angle < 0 || angel > 360) {
+        cout << "Ошибка: угол не может быть отрицательным или больше 360 грудусов!\n";
         return;
     }
     double circumference = 2 * PI * r;
