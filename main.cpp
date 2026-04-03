@@ -8,7 +8,7 @@ using namespace std;
 void calc_rectangle() {
     double shir, dlin;
     cout << "\n--- Прямоугольник ---\n";
-    cout << "Введите ширину прямоугольника: "; //----------------------
+    cout << "Введите ширину прямоугольника: ";
     cin >> shir;
     cout << "Введите длину прямоугольника: ";
     cin >> dlin;
